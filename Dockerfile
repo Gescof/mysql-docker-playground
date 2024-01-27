@@ -1,7 +1,7 @@
 FROM mysql:latest
 
 # Copy the SQL script to a directory inside the container
-COPY firm_model.sql /docker-entrypoint-initdb.d/
+COPY /ddl/firm_model.sql /docker-entrypoint-initdb.d/
 
 # Environment variables for MySQL configuration (if needed)
 ENV MYSQL_ROOT_PASSWORD=root
